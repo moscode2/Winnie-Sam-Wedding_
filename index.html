@@ -2209,7 +2209,7 @@ rsvpForm.addEventListener('submit', function(e) {
     isPlaying = playing;
     musicToggle.classList.toggle('playing', playing);
     musicToggle.setAttribute('aria-pressed', playing ? 'true' : 'false');
-    musicLabel.textContent = playing ? 'Playing ♪' : 'Our Song';
+    musicLabel.textContent = playing ? 'Playing ♪' : 'Yes I Do';
   }
 
   function createPlayer(){
@@ -2217,7 +2217,7 @@ rsvpForm.addEventListener('submit', function(e) {
     ytPlayer = new YT.Player('yt-player', {
       height: '0',
       width: '0',
-      videoId: 'n0FBb6hnwTo',
+      videoId: 'LlZcj_G8OF4',
       playerVars: { autoplay: 0, controls: 0, disablekb: 1, fs: 0, modestbranding: 1, playsinline: 1 },
       events: {
         onReady: function(){
