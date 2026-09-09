@@ -562,7 +562,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   text-align:center;
   position:relative;
-  padding-top:4.5rem; padding-bottom:4rem;
+  padding-top:2.5rem; padding-bottom:2.5rem;
   background:
     radial-gradient(ellipse at 50% -10%, rgba(199,161,91,0.16), transparent 55%),
     radial-gradient(ellipse at 12% 100%, rgba(124,139,104,0.18), transparent 55%),
@@ -619,7 +619,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .hero-sub{
 
-  margin-top:1.4rem;
+  margin-top:1rem;
 
   display:flex;
 
@@ -681,7 +681,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
   color:var(--gold);
 
-  margin-bottom:.9rem;
+  margin-bottom:.45rem;
 
 }
 
@@ -754,7 +754,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
   display:inline-block;
 
-  margin-top:1.55rem;
+  margin-top:1rem;
 
   padding:.55rem 1.2rem;
 
@@ -812,33 +812,61 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 @media(max-width:520px){
 
+  .hero{
+    padding-top:1.5rem; padding-bottom:1.5rem;
+  }
+
   .hero-names{
 
-    font-size:clamp(3rem, 15vw, 4.6rem);
+    font-size:clamp(2.8rem, 14vw, 4.2rem);
 
   }
 
   .hero-sub{
 
-    margin-top:1.25rem;
+    margin-top:0.75rem;
+
+  }
+
+  .hero-invite{
+
+    font-size:clamp(0.9rem, 2.2vw, 1.05rem);
+
+    margin-bottom:0.35rem;
 
   }
 
   .hero-wedding{
 
-    font-size:clamp(3rem, 14vw, 4.2rem);
+    font-size:clamp(2.6rem, 12vw, 3.8rem);
+
+    margin-bottom:0.25rem;
+
+  }
+
+  .hero-forever{
+
+    font-size:clamp(0.95rem, 2.4vw, 1.15rem);
+
+    margin-bottom:0.15rem;
+
+  }
+
+  .hero-destiny{
+
+    font-size:clamp(0.78rem, 1.8vw, 0.9rem);
 
   }
 
   .hero-date{
 
-    margin-top:1.4rem;
+    margin-top:0.85rem;
 
-    padding:.5rem .7rem;
+    padding:.4rem .6rem;
 
-    font-size:.78rem;
+    font-size:.72rem;
 
-    letter-spacing:.15em;
+    letter-spacing:.12em;
 
   }
 
@@ -846,9 +874,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
   .hero-date::after{
 
-    width:15px;
+    width:12px;
 
-    margin:0 .35rem;
+    margin:0 .3rem;
+
+  }
+
+  .pin-row{
+
+    margin-top:0.5rem;
 
   }
 
@@ -868,10 +902,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   position:relative;
   display:block;
   align-self:center;
-  width:min(280px, 62vw);
+  width:min(260px, 58vw);
   aspect-ratio:4/5;
-  margin:1.2rem auto 0;   /* was 2.6rem */
-  padding:10px;
+  margin:0.75rem auto 0;
+  padding:8px;
   background:var(--white);
   border:1px solid var(--gold-soft);
   box-shadow:
@@ -970,25 +1004,24 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
    @media(max-width:520px){
   .hero-photo{
-    width:min(270px, 72vw);
-    margin-top:1.1rem;   /* was 2.3rem */
-    padding:8px;
+    width:min(230px, 62vw);
+    margin-top:0.6rem;
+    padding:6px;
   }
   .hero-photo::before,
   .hero-photo::after{
-    width:27px;
-    height:27px;
+    width:24px;
+    height:24px;
   }
 }
 .scroll-cue{
-  position:absolute; bottom:1.8rem; left:50%; transform:translateX(-50%);
+  position:absolute; bottom:1rem; left:50%; transform:translateX(-50%);
   font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase;
   color:var(--sage-deep);
   display:flex; flex-direction:column; align-items:center; gap:0.4rem;
 }
 .scroll-cue .arrow{ animation:bob 2.2s ease-in-out infinite; font-size:1rem; }
 @keyframes bob{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(6px);} }
-
 /* =========================================================
    COUNTDOWN
    ========================================================= */
