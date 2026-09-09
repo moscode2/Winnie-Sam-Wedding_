@@ -223,7 +223,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ---- Pin chips (location + RSVP quick links) ---- */
 .pin-row{
   display:flex; flex-wrap:wrap; justify-content:center; gap:0.6rem;
-  margin-top:1.6rem;
+  margin-top:0.9rem;
 }
 .pin-chip{
   display:inline-flex; align-items:center; gap:0.4rem;
@@ -813,7 +813,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 @media(max-width:520px){
 
   .hero{
-    padding-top:1.5rem; padding-bottom:1.5rem;
+    min-height:auto;
+    justify-content:flex-start;
+    padding-top:7rem;
+    padding-bottom:3rem;
   }
 
   .hero-names{
@@ -1022,6 +1025,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .scroll-cue .arrow{ animation:bob 2.2s ease-in-out infinite; font-size:1rem; }
 @keyframes bob{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(6px);} }
+
 /* =========================================================
    COUNTDOWN
    ========================================================= */
@@ -2159,24 +2163,22 @@ body > *{ position:relative; z-index:1; }
     3rd October 2026
   </p>
 
-</header>
-      
-    <div class="pin-row reveal reveal-delay-2">
-      <a class="pin-chip" href="#rsvp">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v14H8l-4 4z"/></svg>
-        RSVP
-      </a>
-    </div>
-
-    <div class="hero-photo reveal reveal-delay-3">
-      <img src="assets/cover-photo.jpg" alt="Winnie and Sam in traditional attire" style="width:100%;height:100%;object-fit:cover;object-position:top center;">
-    </div>
-
-    <a href="#countdown" class="scroll-cue">
-      <span></span>
-      <span class="arrow"></span>
+  <div class="pin-row reveal reveal-delay-2">
+    <a class="pin-chip" href="#rsvp">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v14H8l-4 4z"/></svg>
+      RSVP
     </a>
-  </header>
+  </div>
+
+  <div class="hero-photo reveal reveal-delay-3">
+    <img src="assets/cover-photo.jpg" alt="Winnie and Sam in traditional attire" style="width:100%;height:100%;object-fit:cover;object-position:top center;">
+  </div>
+
+  <a href="#countdown" class="scroll-cue">
+    <span></span>
+    <span class="arrow"></span>
+  </a>
+</header>
 
   <section class="countdown-section" id="countdown">
     <div class="container">
