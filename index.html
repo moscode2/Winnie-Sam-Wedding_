@@ -557,12 +557,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* =========================================================
    HERO
    ========================================================= */
-.hero{
+   .hero{
   min-height:100svh;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   text-align:center;
   position:relative;
-  padding-top:6rem; padding-bottom:4rem;
+  padding-top:4.5rem; padding-bottom:4rem;
   background:
     radial-gradient(ellipse at 50% -10%, rgba(199,161,91,0.16), transparent 55%),
     radial-gradient(ellipse at 12% 100%, rgba(124,139,104,0.18), transparent 55%),
@@ -575,6 +575,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   pointer-events:none;
 }
 .hero .eyebrow{ margin-bottom:1rem; }
+.hero .eyebrow:empty{ display:none; }
 .hero-names{
 
   font-family:var(--font-display);
@@ -865,26 +866,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
    .hero-photo{
   position:relative;
-
-  /* Force perfect horizontal centering */
   display:block;
   align-self:center;
-
   width:min(280px, 62vw);
   aspect-ratio:4/5;
-
-  margin:2.6rem auto 0;
-
+  margin:1.2rem auto 0;   /* was 2.6rem */
   padding:10px;
-
   background:var(--white);
-
   border:1px solid var(--gold-soft);
-
   box-shadow:
     0 24px 50px -25px rgba(46,43,34,0.35),
     0 8px 20px -15px rgba(199,161,91,0.25);
-
   z-index:1;
 }
 
@@ -976,22 +968,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
    MOBILE PHOTO
    ========================================================= */
 
-@media(max-width:520px){
-
+   @media(max-width:520px){
   .hero-photo{
     width:min(270px, 72vw);
-
-    margin-top:2.3rem;
-
+    margin-top:1.1rem;   /* was 2.3rem */
     padding:8px;
   }
-
   .hero-photo::before,
   .hero-photo::after{
     width:27px;
     height:27px;
   }
-
 }
 .scroll-cue{
   position:absolute; bottom:1.8rem; left:50%; transform:translateX(-50%);
