@@ -576,28 +576,281 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .hero .eyebrow{ margin-bottom:1rem; }
 .hero-names{
+
   font-family:var(--font-display);
+
   font-size:clamp(3.2rem, 12vw, 6.5rem);
-  line-height:0.98;
+
+  line-height:0.92;
+
   letter-spacing:0.01em;
-}
-.hero-names .amp{ font-style:italic; color:var(--gold); padding-inline:0.15em; }
-.hero-sub{
-  margin-top:1.1rem;
-  font-family:var(--font-display); font-style:italic;
-  font-size:clamp(1.2rem,3vw,1.5rem);
-  line-height:1.35;
-  color:var(--sage-deep);
-}
-.hero-date{
-  margin-top:1.3rem;
-  font-family:"Cormorant Garamond", Georgia, serif;
-  font-size:0.95rem;
+
   font-weight:500;
-  font-style:italic;
-  letter-spacing:0.18em;
+
+  color:var(--ink);
+
+}
+
+.hero-names .amp{
+
+  font-family:"Allura", cursive;
+
+  font-style:normal;
+
+  font-weight:400;
+
+  font-size:1.05em;
+
   color:var(--gold);
+
+  padding-inline:0.15em;
+
+  line-height:0;
+
+  vertical-align:-0.02em;
+
+}
+
+
+/* =========================================================
+   HERO INTRODUCTION
+   ========================================================= */
+
+.hero-sub{
+
+  margin-top:1.4rem;
+
+  display:flex;
+
+  flex-direction:column;
+
+  align-items:center;
+
   text-align:center;
+
+  font-family:var(--font-display);
+
+  color:var(--sage-deep);
+
+}
+
+
+/* Small elegant introduction */
+
+.hero-invite{
+
+  display:block;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+
+  font-size:clamp(1rem, 2.5vw, 1.25rem);
+
+  font-style:italic;
+
+  font-weight:400;
+
+  line-height:1.2;
+
+  color:var(--ink-soft);
+
+  margin-bottom:.55rem;
+
+}
+
+
+/* =========================================================
+   OUR WEDDING DAY — HERO FOCAL POINT
+   ========================================================= */
+
+.hero-wedding{
+
+  display:block;
+
+  font-family:"Allura", cursive;
+
+  font-size:clamp(3.1rem, 8vw, 5.4rem);
+
+  font-weight:400;
+
+  font-style:normal;
+
+  line-height:.9;
+
+  letter-spacing:.01em;
+
+  color:var(--gold);
+
+  margin-bottom:.9rem;
+
+}
+
+
+/* =========================================================
+   THE BEGINNING OF OUR FOREVER
+   ========================================================= */
+
+.hero-forever{
+
+  display:block;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+
+  font-size:clamp(1.05rem, 2.8vw, 1.4rem);
+
+  font-style:italic;
+
+  font-weight:500;
+
+  line-height:1.25;
+
+  color:var(--sage-deep);
+
+  margin-bottom:.3rem;
+
+}
+
+
+/* =========================================================
+   DIFFERENT PATHS — SAME DESTINY
+   ========================================================= */
+
+.hero-destiny{
+
+  display:block;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+
+  font-size:clamp(.88rem, 2vw, 1rem);
+
+  font-style:italic;
+
+  font-weight:400;
+
+  letter-spacing:.025em;
+
+  line-height:1.3;
+
+  color:var(--ink-soft);
+
+}
+
+.hero-destiny em{
+
+  font-style:italic;
+
+  font-weight:600;
+
+  color:var(--sage-deep);
+
+}
+
+
+/* =========================================================
+   DATE
+   ========================================================= */
+
+.hero-date{
+
+  display:inline-block;
+
+  margin-top:1.55rem;
+
+  padding:.55rem 1.2rem;
+
+  font-family:"Cormorant Garamond", Georgia, serif;
+
+  font-size:clamp(.95rem, 2.5vw, 1.15rem);
+
+  font-weight:600;
+
+  font-style:normal;
+
+  letter-spacing:.2em;
+
+  text-transform:uppercase;
+
+  line-height:1.2;
+
+  color:var(--gold);
+
+  text-align:center;
+
+  border-top:1px solid var(--gold-soft);
+
+  border-bottom:1px solid var(--gold-soft);
+
+}
+
+
+/* Small decorative lines beside date */
+
+.hero-date::before,
+
+.hero-date::after{
+
+  content:"";
+
+  display:inline-block;
+
+  width:24px;
+
+  height:1px;
+
+  background:var(--gold-soft);
+
+  vertical-align:middle;
+
+  margin:0 .55rem;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media(max-width:520px){
+
+  .hero-names{
+
+    font-size:clamp(3rem, 15vw, 4.6rem);
+
+  }
+
+  .hero-sub{
+
+    margin-top:1.25rem;
+
+  }
+
+  .hero-wedding{
+
+    font-size:clamp(3rem, 14vw, 4.2rem);
+
+  }
+
+  .hero-date{
+
+    margin-top:1.4rem;
+
+    padding:.5rem .7rem;
+
+    font-size:.78rem;
+
+    letter-spacing:.15em;
+
+  }
+
+  .hero-date::before,
+
+  .hero-date::after{
+
+    width:15px;
+
+    margin:0 .35rem;
+
+  }
+
 }
 .hero-meta{
   margin-top:1.4rem;
@@ -606,23 +859,140 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .hero-meta span:not(:last-child)::after{ content:"·"; margin-left:1rem; color:var(--gold); }
 
-.hero-photo{
-  margin-top:2.6rem;
+/* =========================================================
+   HERO PHOTO — ELEGANT WEDDING FRAME
+   ========================================================= */
+
+   .hero-photo{
+  position:relative;
+
+  /* Force perfect horizontal centering */
+  display:block;
+  align-self:center;
+
   width:min(280px, 62vw);
   aspect-ratio:4/5;
-  border:1px solid var(--gold-soft);
+
+  margin:2.6rem auto 0;
+
   padding:10px;
+
   background:var(--white);
-  box-shadow:0 24px 50px -25px rgba(46,43,34,0.35);
-}
-.hero-photo .ph{
-  width:100%; height:100%;
-  display:flex; align-items:center; justify-content:center;
-  background:var(--ivory-deep);
-  color:var(--ink-soft);
-  font-size:0.78rem; letter-spacing:0.08em; text-align:center; padding:1rem;
+
+  border:1px solid var(--gold-soft);
+
+  box-shadow:
+    0 24px 50px -25px rgba(46,43,34,0.35),
+    0 8px 20px -15px rgba(199,161,91,0.25);
+
+  z-index:1;
 }
 
+
+/* =========================================================
+   INNER PHOTO AREA
+   ========================================================= */
+
+.hero-photo .ph{
+  width:100%;
+  height:100%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
+  background:var(--ivory-deep);
+
+  color:var(--ink-soft);
+
+  font-size:0.78rem;
+  letter-spacing:0.08em;
+
+  text-align:center;
+
+  padding:1rem;
+}
+
+
+/* If the hero contains an actual image */
+
+.hero-photo img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+  object-position:center;
+
+  border:0;
+}
+
+
+/* =========================================================
+   OUTER DECORATIVE CORNERS
+   ========================================================= */
+
+.hero-photo::before,
+.hero-photo::after{
+  content:"";
+
+  position:absolute;
+
+  width:34px;
+  height:34px;
+
+  pointer-events:none;
+
+  z-index:2;
+}
+
+
+/* Top-left */
+
+.hero-photo::before{
+  top:-6px;
+  left:-6px;
+
+  border-top:1.5px solid var(--gold);
+  border-left:1.5px solid var(--gold);
+}
+
+
+/* Bottom-right */
+
+.hero-photo::after{
+  right:-6px;
+  bottom:-6px;
+
+  border-right:1.5px solid var(--gold);
+  border-bottom:1.5px solid var(--gold);
+}
+
+
+/* =========================================================
+   MOBILE PHOTO
+   ========================================================= */
+
+@media(max-width:520px){
+
+  .hero-photo{
+    width:min(270px, 72vw);
+
+    margin-top:2.3rem;
+
+    padding:8px;
+  }
+
+  .hero-photo::before,
+  .hero-photo::after{
+    width:27px;
+    height:27px;
+  }
+
+}
 .scroll-cue{
   position:absolute; bottom:1.8rem; left:50%; transform:translateX(-50%);
   font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase;
@@ -1729,12 +2099,48 @@ body > *{ position:relative; z-index:1; }
     <a href="#gallery">Gallery</a>
     <a href="#rsvp">RSVP</a>
   </div>
-    <header class="hero" id="top">
-      <div class="hero-frame" aria-hidden="true"></div>
-      <span class="eyebrow reveal"></span>
-      <h1 class="hero-names reveal reveal-delay-1">Winnie<span class="amp">&amp;</span>Sam</h1>
-      <p class="hero-sub reveal reveal-delay-2">Invite you to be part of<br>Our Wedding Day<br>The beginning of our forever, <br> Different paths, Same Destiny.</p>
-      <p class="hero-date reveal reveal-delay-2">3rd October 2026</p>
+   <header class="hero" id="top">
+
+  <div class="hero-frame" aria-hidden="true"></div>
+
+  <span class="eyebrow reveal"></span>
+
+  <h1 class="hero-names reveal reveal-delay-1">
+    Winnie<span class="amp">&amp;</span>Sam
+  </h1>
+
+  <!-- Elegant divider -->
+  <div class="hero-divider reveal" aria-hidden="true">
+    <span></span>
+    <span class="divider-symbol">✦</span>
+    <span></span>
+  </div>
+
+  <div class="hero-sub reveal reveal-delay-2">
+
+    <span class="hero-invite">
+      Invite you to be part of
+    </span>
+
+    <span class="hero-wedding">
+      Our Wedding Day
+    </span>
+
+    <span class="hero-forever">
+      The beginning of our forever
+    </span>
+
+    <span class="hero-destiny">
+      Different paths, <em>Same Destiny.</em>
+    </span>
+
+  </div>
+
+  <p class="hero-date reveal reveal-delay-2">
+    3rd October 2026
+  </p>
+
+</header>
       
     <div class="pin-row reveal reveal-delay-2">
       <a class="pin-chip" href="#rsvp">
